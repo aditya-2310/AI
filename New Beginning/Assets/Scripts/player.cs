@@ -46,7 +46,7 @@ public class player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidbodycomponent.velocity = new Vector2(horizontalinput * 36f, rigidbodycomponent.velocity.y);
+        rigidbodycomponent.velocity = new Vector2(horizontalinput * 39f, rigidbodycomponent.velocity.y);
 
         if (spacekeywaspressed)
         {
