@@ -228,6 +228,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &439880743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 439880744}
+  m_Layer: 0
+  m_Name: attackpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &439880744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439880743}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 1.37, y: -0.57, z: 49577.508}
+  m_LocalScale: {x: 0.10385627, y: 0.0859921, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2059533834}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +688,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   animator: {fileID: 840975331}
+  health: 100
 --- !u!95 &840975331
 Animator:
   serializedVersion: 3
@@ -917,6 +948,7 @@ GameObject:
   - component: {fileID: 2059533835}
   - component: {fileID: 2059533836}
   - component: {fileID: 2059533837}
+  - component: {fileID: 2059533838}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -1004,7 +1036,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -39.4, y: -3.3, z: 0}
   m_LocalScale: {x: 9.628692, y: 11.628975, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 439880744}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1068,3 +1101,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 840975329}
+--- !u!114 &2059533838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059533831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6092137484a862744b6952a6ccedd49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  attackmask:
+    serializedVersion: 2
+    m_Bits: 64
+  attackpoint: {fileID: 439880744}
+  attackrange: 6

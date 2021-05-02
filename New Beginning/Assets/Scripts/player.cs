@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
+    public Transform groundchecktransform;
+    public LayerMask playermask;
+    public Animator animator;
+    public float health = 100;
+
     private float horizontalinput;
     private Rigidbody2D rigidbodycomponent;
     private bool spacekeywaspressed;
-    public Transform groundchecktransform;
-    private bool isgrounded;
-    public LayerMask playermask;
+    private bool isgrounded;   
     private bool isfacingright;
-    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -62,5 +65,19 @@ public class player : MonoBehaviour
             isfacingright = !isfacingright;
             transform.Rotate(0, 180f, 0);
         }
+    }
+
+    public void takeDamage(float damage)
+    {
+        health = health - damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        SceneManager.LoadScene(0);
     }
 }
