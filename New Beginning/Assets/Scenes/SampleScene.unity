@@ -237,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 439880744}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: attackpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,9 +947,9 @@ GameObject:
   - component: {fileID: 2059533832}
   - component: {fileID: 2059533835}
   - component: {fileID: 2059533836}
-  - component: {fileID: 2059533837}
   - component: {fileID: 2059533838}
-  m_Layer: 0
+  - component: {fileID: 2059533837}
+  m_Layer: 7
   m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,7 +1097,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2059533831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a0eee4bd9c59ed4d9ea33a50dfd7582, type: 3}
+  m_Script: {fileID: 11500000, guid: 79a6887e8ce874b4a95fa6c4b3312ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 840975329}
