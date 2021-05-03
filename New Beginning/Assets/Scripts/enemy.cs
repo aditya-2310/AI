@@ -7,9 +7,10 @@ public class enemy : MonoBehaviour
 {
     public Transform player;
     public GameObject health_status;
+    public health_slider_enemy healthSlider;
 
     private bool isfacingright;
-    private float health = 100;
+    public float health = 100;
     private Text health_on_screen;
     
 
@@ -31,6 +32,8 @@ public class enemy : MonoBehaviour
         }
 
         health_on_screen.text = health.ToString();
+
+        healthSlider.setMaxHealth(health);
     }
 
     private void Flip()

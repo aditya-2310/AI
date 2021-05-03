@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class player : MonoBehaviour
     public LayerMask playermask;
     public Animator animator;
     public float health = 100;
+    public Text playerHealth;
 
     private float horizontalinput;
     private Rigidbody2D rigidbodycomponent;
@@ -70,6 +72,8 @@ public class player : MonoBehaviour
     public void takeDamage(float damage)
     {
         health = health - damage;
+        playerHealth.text = health.ToString();
+
         if (health <= 0)
         {
             Die();
