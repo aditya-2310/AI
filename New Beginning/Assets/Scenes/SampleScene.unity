@@ -1685,6 +1685,7 @@ MonoBehaviour:
   player: {fileID: 840975329}
   health_status: {fileID: 1499955936}
   healthSlider: {fileID: 1593370679}
+  deatheffect: {fileID: 6436551004019084883, guid: a8633697efb67114d9613cdfc5d35222, type: 3}
   health: 100
 --- !u!114 &2059533838
 MonoBehaviour:
