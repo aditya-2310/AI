@@ -61,6 +61,6 @@ public class enemy : MonoBehaviour
         
 
         yield return new WaitForSeconds(0.92f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 }
