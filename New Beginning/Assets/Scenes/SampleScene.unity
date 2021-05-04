@@ -824,7 +824,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840975324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -101.1, y: -11.1, z: 0}
+  m_LocalPosition: {x: -97.5, y: -14.7, z: 0}
   m_LocalScale: {x: 30.124632, y: 31.919249, z: 1}
   m_Children:
   - {fileID: 2027400966}
@@ -1686,6 +1686,7 @@ MonoBehaviour:
   health_status: {fileID: 1499955936}
   healthSlider: {fileID: 1593370679}
   deatheffect: {fileID: 6436551004019084883, guid: a8633697efb67114d9613cdfc5d35222, type: 3}
+  enemyAttack: {fileID: 0}
   health: 100
 --- !u!114 &2059533838
 MonoBehaviour:

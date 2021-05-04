@@ -10,6 +10,7 @@ public class enemy : MonoBehaviour
     public GameObject health_status;
     public health_slider_enemy healthSlider;
     public GameObject deatheffect;
+    public GameObject enemyAttack;
 
     private bool isfacingright;
     public float health = 100;
@@ -20,7 +21,6 @@ public class enemy : MonoBehaviour
     void Start()
     {
         isfacingright = false;
-
         health_on_screen =  health_status.GetComponent<Text>();
     }
 
@@ -48,13 +48,19 @@ public class enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            StartCoroutine(Die());
         }
     }
 
-    private void Die()
+    IEnumerator Die()
     {
-        Destroy(gameObject);
         Instantiate(deatheffect, transform.position, transform.rotation);
-    }    
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<SpriteRenderer>().enabled = false;
+        Destroy(GetComponent<enemy_attack>());
+        
+
+        yield return new WaitForSeconds(0.92f);
+        SceneManager.LoadScene(0);
+    }
 }
