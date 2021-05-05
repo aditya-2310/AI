@@ -5,6 +5,7 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public GameObject impactEffect;
 
     private float speed = 50f;
     private float damage = 1f;
@@ -17,11 +18,15 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
+
         enemy Enemy = collision.GetComponent<enemy>();
         if (Enemy != null)
         {
             Enemy.takeDamage(damage);
         }
+        Instantiate(impactEffect, transform.position, transform.rotation);
+
         Destroy(gameObject);
     }
 }
